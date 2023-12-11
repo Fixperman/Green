@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Tours</title>
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body id="body">
+    <header class="header">
+      <div class="bg-left"></div>
+      <div class="bg-right"></div>
+      <div class="bg-decor"></div>
+      <div class="container header__container">
+        <div class="header__inner">
+          <div class="header__top">
+            <a href="#" class="logo"
+              >GreenTours <br />
+              <span>Пешие экскурсии</span></a
+            >
+
+            <ul class="header__menu">
+              <li class="header__menu-list">
+                <a class="header__menu-link" href="#videoId">Видео</a>
+              </li>
+              <li class="header__menu-list">
+                <a class="header__menu-link" href="#saleId">Скидка</a>
+              </li>
+              <li class="header__menu-list">
+                <a class="header__menu-link" href="#galleryId">Галерея</a>
+              </li>
+              <li class="header__menu-list">
+                <a class="header__menu-link" href="#reviewsId">Отзывы</a>
+              </li>
+              <li class="header__call">
+                <a class="header__call-link" href="tel:+163290856824"
+                  >+16 3290856824
+                </a>
+                <br />
+                <button id="callBtnOne">Обратный звонок</button>
+              </li>
+            </ul>
+            <div class="burger"></div>
+            <div class="burger-close">
+              <img src="img/burger-close.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="header__intro">
+            <h1 class="header__title">Пешие экскурсии по рисовым полям</h1>
+            <p class="header__subtitle">
+              Организуем для вас незабываемый пешеходный тур по зелёным рисовым
+              полям и террасам Индонезии
+            </p>
+            <button class="header__btn">Выбрать экскурсию</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="modal">
+      <div class="modal__box modal__box--one">
+        <img src="img/modal-close.svg" alt="" class="modal__close" />
+        <p class="modal__box-text">
+          Оставьте свой телефон, и мы перезвоним вам в ближайшее время
+        </p>
+
+        <div class="input-block">
+          <input
+            placeholder="(123) 456-7890"
+            id="saleInp"
+            class="input"
+            type="tel"
+          />
+          <label class="label modal__label" for="saleInp">Телефон</label>
+        </div>
+        <button
+          type="submit"
+          class="recall__btn recall__btn-modal"
+          id="recallBtnOne"
+        >
+          Перезвоните мне
+        </button>
+      </div>
+
+      <div class="modal__box--two">
+        <img
+          src="img/modal-close.svg"
+          alt=""
+          class="modal__close modal__close--two"
+        />
+        <p class="modal__title">Спасибо</p>
+        <p class="modal__text--two">
+          Наш оператор обязательно свяжется с вами в ближайшее время
+        </p>
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="info">
+        <div class="container">
+          <div class="info__inner">
+            <div class="info__block">
+              <img class="info__block-img" src="img/info-img-1.svg" alt="" />
+              <p class="info__block-text">Трансфер из отеля или аэропорта</p>
+            </div>
+            <div class="info__block">
+              <img class="info__block-img" src="img/info-img-2.svg" alt="" />
+              <p class="info__block-text">Фотосессия на всём маршруте</p>
+            </div>
+            <div class="info__block">
+              <img class="info__block-img" src="img/info-img-3.svg" alt="" />
+              <p class="info__block-text">
+                Опытный местный гид с хорошим английским
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video" id="videoId">
+        <div class="container">
+          <div class="video__top">
+            <h3 class="video__title title">
+              Посмотрите, как проходят наши экскурсии
+            </h3>
+            <button class="video__btn button_more">
+              Больше видео
+              <img class="arrow" src="img/arrow-btn.svg" alt="Play" />
+            </button>
+          </div>
+        </div>
+        <div class="video__player">
+          <a
+            class="video__play"
+            data-fancybox
+            href="https://www.youtube.com/watch?v=TCcf96_GkKs"
+            ><svg
+              width="198"
+              height="198"
+              viewBox="0 0 198 198"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="99" cy="99" r="96" stroke="white" stroke-width="6" />
+              <path
+                d="M148 98.5L77.5 138.77L77.5 58.2298L148 98.5Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <h3 class="about__title title">Почему туристы выбирают нас?</h3>
+          <div class="about__inner">
+            <picture class="about__image">
+              <source
+                srcset="img/about-img-other.jpg"
+                media="(max-width:810px)"
+              />
+              <img src="img/about-img.jpg" alt="Photo" />
+            </picture>
+            <div class="about__info">
+              <div class="about__info-block">
+                <p class="about__block-title">Все уже включено</p>
+                <p class="about__block-text">
+                  Никаких скрытых платежей, все включено: от воды до трансфера
+                  и услуг гида
+                </p>
+              </div>
+              <div class="about__info-block about__info-block--two">
+                <p class="about__block-title">От 4 часов до 2 дней</p>
+                <p class="about__block-text">
+                  Выбирайте подходящую продолжительность экскурсии
+                </p>
+              </div>
+              <div class="about__info-block about__info-block--three">
+                <p class="about__block-title">
+                  Не требует физической подготовки
+                </p>
+                <p class="about__block-text">
+                  Во время экскурсии не будет сложных восхождений или спусков
+                </p>
+              </div>
+              <div class="about__info-block">
+                <p class="about__block-title">Местные гиды</p>
+                <p class="about__block-text">
+                  Проведут в потайные места, расскажут о местных традициях
+                  и культуре
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sale" id="saleId">
+        <form class="sale__form" action="">
+          <h2 class="sale__title">
+            Получите гарантированную скидку -20% на весь тур
+          </h2>
+          <p class="sale__text">
+            Cкидка действует для участников ранней брони до 1 мая
+          </p>
+          <div class="sale__call-box">
+            <div class="input-block">
+              <input
+                placeholder="(123) 456-7890"
+                id="saleInput"
+                class="input"
+                type="tel"
+              />
+              <label class="label" for="saleInput">Телефон</label>
+            </div>
+            <button type="submit" class="recall__btn">Перезвоните мне</button>
+          </div>
+          <label class="sale_checkbox">
+            <input class="checkbox" type="checkbox" />
+            <span class="check__style"></span>
+            <p class="sale_checkbox-text">
+              Я согласен на обработку персональных данных
+            </p>
+          </label>
+        </form>
+      </section>
+
+      <section class="gallery" id="galleryId">
+        <div class="container">
+          <div class="gallery__top">
+            <h1 class="gallery__title title">Галерея экскурсий</h1>
+            <button class="gallery__btn button_more">
+              Больше фото <img src="img/arrow-btn.svg" alt="" class="arrow" />
+            </button>
+          </div>
+          <div class="gallery__box">
+            <div class="photo photo--1"></div>
+            <div class="photo photo--2"></div>
+            <div class="photo photo--3"></div>
+            <div class="photo photo--4"></div>
+            <div class="photo photo--5"></div>
+            <div class="photo photo--6"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviewsId">
+        <div class="container">
+          <div class="reviews__top">
+            <h1 class="reviews__title title">
+              Прочитайте отзывы наших клиентов
+            </h1>
+            <div class="reviews__arrows">
+              <div class="arrow-btn arrow-prev">
+                <img src="img/arrow-btn.svg" alt="" />
+              </div>
+              <div class="arrow-btn arrow-next">
+                <img src="img/arrow-btn.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="reviews__block">
+                  <img
+                    class="reviews__block-img"
+                    src="img/avatar-1.png"
+                    alt=""
+                  />
+                  <p class="reviews__block-text">
+                    Экскурсия очень понравилась. Утром нас забрал автобус
+                    с гидом. Экскурсия длиться целый день. Очень красивые
+                    пейзажи.
+                  </p>
+                  <p class="reviews__block-text reviews__block-subtext">
+                    Ирина Малышева
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviews__block">
+                  <img
+                    class="reviews__block-img"
+                    src="img/avatar-2.png"
+                    alt=""
+                  />
+                  <p class="reviews__block-text">
+                    Скорее это путешествие подойдёт для взрослых. Дети устали.
+                    Но взрослым понравилось очень. Встретили местных жителей,
+                    они показали нам как собирается урожай. Вообще все местные
+                    очень добрые и улыбчивые люди.
+                  </p>
+                  <p class="reviews__block-text reviews__block-subtext">
+                    Ирина Малышева
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviews__block">
+                  <img
+                    class="reviews__block-img"
+                    src="img/avatar-3.png"
+                    alt=""
+                  />
+                  <p class="reviews__block-text">
+                    Поля расположены на возвышенности. Когда поднимаешься наверх
+                    открываются красивейшие пейзажи. Вид сверху и масштабы
+                    завораживают. Всей семье очень понравилась экскурсия.
+                  </p>
+                  <p class="reviews__block-text reviews__block-subtext">
+                    Ирина Малышева
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviews__block">
+                  <img
+                    class="reviews__block-img"
+                    src="img/avatar-1.png"
+                    alt=""
+                  />
+                  <p class="reviews__block-text">
+                    Экскурсия очень понравилась. Утром нас забрал автобус
+                    с гидом. Экскурсия длиться целый день. Очень красивые
+                    пейзажи.
+                  </p>
+                  <p class="reviews__block-text reviews__block-subtext">
+                    Ирина Малышева
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviews__block">
+                  <img
+                    class="reviews__block-img"
+                    src="img/avatar-2.png"
+                    alt=""
+                  />
+                  <p class="reviews__block-text">
+                    Скорее это путешествие подойдёт для взрослых. Дети устали.
+                    Но взрослым понравилось очень. Встретили местных жителей,
+                    они показали нам как собирается урожай. Вообще все местные
+                    очень добрые и улыбчивые люди.
+                  </p>
+                  <p class="reviews__block-text reviews__block-subtext">
+                    Ирина Малышева
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviews__block">
+                  <img
+                    class="reviews__block-img"
+                    src="img/avatar-3.png"
+                    alt=""
+                  />
+                  <p class="reviews__block-text">
+                    Поля расположены на возвышенности. Когда поднимаешься наверх
+                    открываются красивейшие пейзажи. Вид сверху и масштабы
+                    завораживают. Всей семье очень понравилась экскурсия.
+                  </p>
+                  <p class="reviews__block-text reviews__block-subtext">
+                    Ирина Малышева
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <a href="#" class="logo footer__logo"
+              >GreenTours <br />
+              <span>Пешие экскурсии</span></a
+            >
+            <nav class="footer__navigation">
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a href="#videoId" class="footer__list-item">Видео</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#saleId" class="footer__list-item">Скидка -20%</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#galleryId" class="footer__list-item">Галерея фото</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#reviewsId" class="footer__list-item">Отзывы</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-item">Вакансии</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-item">Наши гиды</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-item">Фотосессии</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__call">
+              <button class="footer__call-btn" id="recallBtnTwo">
+                Перезвоните мне
+              </button>
+              <a href="tel:+163290856824" class="footer__call-link"
+                >+16 3290856824</a
+              >
+            </div>
+          </div>
+          <div class="politic">
+            <a href="#" class="politic__text">
+              Политика в отношении обработки персональных данных
+            </a>
+            <a href="mailto:hello@greentours.io" class="politic__email"
+              >hello@greentours.io</a
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
